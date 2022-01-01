@@ -63,6 +63,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void moveByRigidBody()
     {
-        rigidBody.velocity += getDirectionCamera() * speed * Time.deltaTime;
+        rigidBody.MovePosition(rigidBody.transform.position + getDirectionCamera() * speed * Time.deltaTime);
     }
 }
