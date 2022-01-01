@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canMove()
     {
         // TODO: Check player can move or not. Will implement later.
-        return Input.GetAxis("Vertical") > 0;
+        return Input.GetKey(KeyCode.LeftControl);
     }
 
     private Vector3 getDirectionCamera()
