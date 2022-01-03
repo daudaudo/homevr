@@ -339,9 +339,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120b4e1ca6582aa4c956c7a325712e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keywords:
-  - up
-  - down
-  - left
-  - right
-  confidence: 0
+  confidence: 3
