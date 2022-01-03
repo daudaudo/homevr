@@ -7,12 +7,16 @@ using UnityEngine.Windows.Speech;
 /// </summary>
 public class SpeechRecognitionEngine : MonoBehaviour
 {
-    private string[] keywords = new string[] { "move", "stop", "menu", "hide" };
+    public string[] keywords;
     public ConfidenceLevel confidence = ConfidenceLevel.Rejected;
     protected PhraseRecognizer recognizer;
 
+    public PhraseRecognizedHandler phraseRecognizedHandler;
+
     private void Start()
     {
+        phraseRecognizedHandler = GetComponent<PhraseRecognizedHandler>();
+        Debug.Log(phraseRecognizedHandler.ToString());
         if (keywords != null)
         {
             recognizer = new KeywordRecognizer(keywords, confidence);
@@ -29,7 +33,10 @@ public class SpeechRecognitionEngine : MonoBehaviour
 
     void Recognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
     {
-        Debug.Log("You said: <b>" + args.text + "</b>");
+        if(phraseRecognizedHandler != null)
+        {
+            phraseRecognizedHandler.handle(args);
+        }
     }
 
     private void Update()

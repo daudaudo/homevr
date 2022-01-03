@@ -306,6 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1850377345}
   - component: {fileID: 1850377346}
+  - component: {fileID: 1850377347}
   m_Layer: 0
   m_Name: Application
   m_TagString: Untagged
@@ -339,4 +340,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120b4e1ca6582aa4c956c7a325712e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keywords:
+  - move
+  - stop
+  - menu
+  - hide
   confidence: 3
+--- !u!114 &1850377347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850377344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d93e1548510d604b97ad0a26c84316f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
