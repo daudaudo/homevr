@@ -10,7 +10,7 @@ public class oketungbeo : MonoBehaviour
         
     }
     public void alotung(){
-        Debug.Log("sfa");
+        Debug.Log(this.gameObject.name);
     }
     // Update is called once per frame
     void Update()

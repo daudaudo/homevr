@@ -26,7 +26,6 @@ public class CamRay : MonoBehaviour
             if(child.GetComponent<MoveableObject>() != null){
                 string animBoolNameNum = "isOpen_Obj_" + child.GetComponent<MoveableObject>().objectNumber.ToString();
                 // Debug.Log(animBoolNameNum);
-                parent.GetComponent<OpenCloseController>().StartAni(animBoolNameNum);
             }
         }
     }
