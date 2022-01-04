@@ -5858,8 +5858,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raycasterEventMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  maxRaycastHits: 64
+    m_Bits: 1079
+  maxRaycastHits: 243
 --- !u!4 &862510202 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6926497263319968611, guid: 9cd98c257de75524d85e627779fd2b6f,
@@ -6544,6 +6544,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b63893d9258e64b8aefcba8adba680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &968627655 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000013867835830, guid: 2c955ce5cc6b1a542900b51ed266259c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1082504066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &968627659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968627655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 968627660}
+          m_MethodName: StartAni
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &968627660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968627655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765e919be48d1d5468def85dc1d321f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 981288694}
 --- !u!1001 &970953841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6551,9 +6598,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1274255059}
     m_Modifications:
+    - target: {fileID: 1000011122617890, guid: 8573759d3a770094eb2998662fadeb64, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1000011876567432, guid: 8573759d3a770094eb2998662fadeb64, type: 3}
       propertyPath: m_Name
       value: PFB_BedsideTable
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011876567432, guid: 8573759d3a770094eb2998662fadeb64, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1000011937280936, guid: 8573759d3a770094eb2998662fadeb64, type: 3}
       propertyPath: m_Layer
@@ -6787,6 +6842,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971717811}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &981288694 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95000014167001920, guid: 2c955ce5cc6b1a542900b51ed266259c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1082504066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &990283295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7737,6 +7798,18 @@ PrefabInstance:
     - target: {fileID: 1000010719739470, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
       propertyPath: m_Name
       value: PFB_TVStand
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010719739470, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011057010452, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011711900710, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4000011810544638, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
       propertyPath: m_RootOrder
@@ -12121,6 +12194,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1893486745917127105}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1866195825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000010247695670, guid: 2c955ce5cc6b1a542900b51ed266259c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1082504066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1866195829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866195825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765e919be48d1d5468def85dc1d321f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 981288694}
+--- !u!114 &1866195830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866195825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1866195829}
+          m_MethodName: StartAni
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1867548929 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6926497263319968611, guid: 9cd98c257de75524d85e627779fd2b6f,
