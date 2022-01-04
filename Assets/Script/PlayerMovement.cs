@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 10f;
     public TypeMovement typeMovement = TypeMovement.Rigid;
     private Rigidbody rigidBody;
+    bool isCanMove;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canMove())
+        // if (canMove())
+        if (isCanMove)
         {
             switch(typeMovement)
             {
@@ -47,6 +49,13 @@ public class PlayerMovement : MonoBehaviour
     {
         // TODO: Check player can move or not. Will implement later.
         return Input.GetKey(KeyCode.LeftControl);
+    }
+
+    public void SetMoveState(bool state){
+        isCanMove = state;
+    }
+    public bool IsCanMove(){
+        return isCanMove;
     }
 
     private Vector3 getDirectionCamera()
