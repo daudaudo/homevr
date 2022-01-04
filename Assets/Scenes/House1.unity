@@ -8969,15 +8969,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 140606428, guid: c75158f691670ae44a9ffdc726a8d331, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9848078
+      value: 0.5299193
       objectReference: {fileID: 0}
     - target: {fileID: 140606428, guid: c75158f691670ae44a9ffdc726a8d331, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.17364816
+      value: 0.8480481
       objectReference: {fileID: 0}
     - target: {fileID: 140606428, guid: c75158f691670ae44a9ffdc726a8d331, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 20
+      value: 116
       objectReference: {fileID: 0}
     - target: {fileID: 4716042490894669489, guid: c75158f691670ae44a9ffdc726a8d331,
         type: 3}
