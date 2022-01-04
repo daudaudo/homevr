@@ -5,6 +5,8 @@ using UnityEngine;
 public class MovePointController : MonoBehaviour
 {
     public GameObject movePoint;
+    public AudioSource voice;
+    bool isSpeak;
    // public GameObject door;
     public Animator myDoor = null;
     public bool openTrigger = false;
@@ -14,6 +16,7 @@ public class MovePointController : MonoBehaviour
     private void Start()
     {
         isOpen = false;
+        isSpeak = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -42,6 +45,11 @@ public class MovePointController : MonoBehaviour
 
     public void Move()
     {
+        if(voice && !isSpeak)
+        {
+            voice.Play();
+            isSpeak = true;
+        }
         GameObject player = GameObject.Find("Player");
         player.transform.position = transform.position;
     }
