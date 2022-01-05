@@ -21361,7 +21361,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c36ce080c9a36a84d899cd02b9e2b733,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c36ce080c9a36a84d899cd02b9e2b733,
         type: 3}
@@ -21418,6 +21418,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: theboss
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: c36ce080c9a36a84d899cd02b9e2b733,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0971275c373b241418f40ff2f4c2640a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c36ce080c9a36a84d899cd02b9e2b733, type: 3}
 --- !u!1 &1734490873
