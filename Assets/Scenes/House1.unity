@@ -5003,6 +5003,7 @@ GameObject:
   - component: {fileID: 375069129}
   - component: {fileID: 375069128}
   - component: {fileID: 375069127}
+  - component: {fileID: 375069130}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -5085,6 +5086,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375069125}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &375069130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375069125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d59f8a36995cc94f88528cd98f90bdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 861226237}
 --- !u!4 &375167537 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010214412056, guid: 9d10197870d1b0d4faefe30b1a81d689,
@@ -9846,6 +9860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 860108543}
+  wheel: {fileID: 0}
 --- !u!65 &860108546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19501,6 +19516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1599117769}
+  wheel: {fileID: 0}
 --- !u!1001 &1600863864
 PrefabInstance:
   m_ObjectHideFlags: 0
