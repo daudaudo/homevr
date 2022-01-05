@@ -7,6 +7,11 @@ public class StartScenePhraseRecognizedHandler : MonoBehaviour, PhraseRecognized
 {
     public GameObject menu;
     PlayerMovement player;
+    public Animator animator;
+    string walk = "walk";
+    string dance = "dance";
+    bool isWalk = false;
+    bool isDance = false;
     void Start(){
         player = FindObjectOfType<PlayerMovement>();
     }
@@ -25,11 +30,17 @@ public class StartScenePhraseRecognizedHandler : MonoBehaviour, PhraseRecognized
             case "stop":
                 Debug.Log(args.text);
                 player.SetMoveState(false);
+                isWalk = false;
+                isDance = false;
+                animator.SetBool(walk, isWalk);
+                animator.SetBool(dance, isDance);
                 break;
             case "move":
                 Debug.Log(args.text);
                 player.speed = 2f;
                 player.SetMoveState(true);
+                isWalk = true;
+                animator.SetBool(walk, isWalk);
                 break;
             case "fast":
                 Debug.Log(args.text);
@@ -43,6 +54,10 @@ public class StartScenePhraseRecognizedHandler : MonoBehaviour, PhraseRecognized
                 Debug.Log(args.text);
                 player.speed = -2f;
                 player.SetMoveState(true);
+                break;
+            case "dance":
+                isDance = true;
+                animator.SetBool(dance, isDance);
                 break;
             default :
                 Debug.Log(args.text);
