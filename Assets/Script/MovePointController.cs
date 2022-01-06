@@ -36,11 +36,13 @@ public class MovePointController : MonoBehaviour
     public void Enter()
     {
         movePoint.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 0.85f);
+        transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
 
     }
     public void Exit()
     {
         movePoint.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 0.2f);
+        transform.localScale = new Vector3(0.83f, 0.83f, 0.83f);
     }
 
     public void Move()
