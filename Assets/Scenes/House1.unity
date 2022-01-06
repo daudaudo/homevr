@@ -22372,8 +22372,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1605480085}
-  - component: {fileID: 1605480086}
   - component: {fileID: 1605480087}
+  - component: {fileID: 1605480086}
   m_Layer: 0
   m_Name: Application
   m_TagString: Untagged
@@ -22418,9 +22418,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1605480084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca60362d40f51d7409aa2a0c639e3cee, type: 3}
+  m_Script: {fileID: 11500000, guid: 120b4e1ca6582aa4c956c7a325712e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keywords:
+  - menu
+  - hide
+  - stop
+  - move
+  - fast
+  - slow
+  - back
+  - dance
+  - exit
+  confidence: 3
 --- !u!4 &1606185240 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 700391701821134907, guid: 76e632aad04aafa4f88a4a6f4e6243cf,
