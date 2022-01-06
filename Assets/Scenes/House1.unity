@@ -11796,6 +11796,76 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1893486746687065793}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &875747058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 875747059}
+  - component: {fileID: 875747060}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &875747059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875747058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1062347841}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &875747060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875747058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a59096d5cdbc5468bdadb62bfdeb18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onSupportedLanguagesFetched:
+    m_PersistentCalls:
+      m_Calls: []
+  onAuthorizationStatusFetched:
+    m_PersistentCalls:
+      m_Calls: []
+  onPartialResults:
+    m_PersistentCalls:
+      m_Calls: []
+  onFinalResults:
+    m_PersistentCalls:
+      m_Calls: []
+  onAvailabilityChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onErrorDuringRecording:
+    m_PersistentCalls:
+      m_Calls: []
+  onErrorOnStartRecording:
+    m_PersistentCalls:
+      m_Calls: []
+  onEndOfSpeech:
+    m_PersistentCalls:
+      m_Calls: []
+  onReadyForSpeech:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &875893346
 GameObject:
   m_ObjectHideFlags: 0
@@ -15067,6 +15137,7 @@ Transform:
   - {fileID: 1605480085}
   - {fileID: 1694967166}
   - {fileID: 928303181}
+  - {fileID: 875747059}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -22372,8 +22443,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1605480085}
-  - component: {fileID: 1605480087}
   - component: {fileID: 1605480086}
+  - component: {fileID: 1605480087}
   m_Layer: 0
   m_Name: Application
   m_TagString: Untagged
@@ -22418,20 +22489,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1605480084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 120b4e1ca6582aa4c956c7a325712e00, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ab6ed27b2c87bb4ca9fe16ac2a1cf40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keywords:
-  - menu
-  - hide
-  - stop
-  - move
-  - fast
-  - slow
-  - back
-  - dance
-  - exit
-  confidence: 3
 --- !u!4 &1606185240 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 700391701821134907, guid: 76e632aad04aafa4f88a4a6f4e6243cf,

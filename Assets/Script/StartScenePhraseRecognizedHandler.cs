@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Windows.Speech;
 
-public class StartScenePhraseRecognizedHandler : MonoBehaviour, PhraseRecognizedHandler
+public class StartScenePhraseRecognizedHandler : MonoBehaviour
 {
     public GameObject menu;
     PlayerMovement player;
@@ -16,20 +15,20 @@ public class StartScenePhraseRecognizedHandler : MonoBehaviour, PhraseRecognized
     void Start(){
         player = FindObjectOfType<PlayerMovement>();
     }
-    public void handle(PhraseRecognizedEventArgs args)
+    public void handle(string command)
     {
-        switch(args.text)
+        switch(command)
         {
             case "menu":
-                Debug.Log(args.text);
+                Debug.Log(command);
                 menu.SetActive(true);
                 break;
             case "hide":
-                Debug.Log(args.text);
+                Debug.Log(command);
                 menu.SetActive(false);
                 break;
             case "stop":
-                Debug.Log(args.text);
+                Debug.Log(command);
                 player.SetMoveState(false);
                 isWalk = false;
                 isDance = false;
@@ -37,7 +36,7 @@ public class StartScenePhraseRecognizedHandler : MonoBehaviour, PhraseRecognized
                 animator.SetBool(dance, isDance);
                 break;
             case "move":
-                Debug.Log(args.text);
+                Debug.Log(command);
                 player.speed = 2f;
                 player.SetMoveState(true);
                 isWalk = true;
@@ -46,15 +45,15 @@ public class StartScenePhraseRecognizedHandler : MonoBehaviour, PhraseRecognized
                 animator.SetBool(walk, isWalk);
                 break;
             case "fast":
-                Debug.Log(args.text);
+                Debug.Log(command);
                 player.speed = 4f;
                 break;
             case "slow":
-                Debug.Log(args.text);
+                Debug.Log(command);
                 player.speed = 2f;
                 break;
             case "back":
-                Debug.Log(args.text);
+                Debug.Log(command);
                 player.speed = -2f;
                 player.SetMoveState(true);
                 break;
@@ -68,7 +67,7 @@ public class StartScenePhraseRecognizedHandler : MonoBehaviour, PhraseRecognized
                 SceneManager.LoadScene("MainScene");
                 break;
             default :
-                Debug.Log(args.text);
+                Debug.Log(command);
                 break;
         }
     }
