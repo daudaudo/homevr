@@ -21,6 +21,7 @@ public class MovePointController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Speak();
         if (openTrigger && !isOpen)
         {
             myDoor.Play("OpenDoor", 0, 0f);
@@ -47,12 +48,17 @@ public class MovePointController : MonoBehaviour
 
     public void Move()
     {
-        if(voice && !isSpeak)
+        Speak();
+        GameObject player = GameObject.Find("Player");
+        player.transform.position = transform.position;
+    }
+
+    public void Speak()
+    {
+        if (voice && !isSpeak)
         {
             voice.Play();
             isSpeak = true;
         }
-        GameObject player = GameObject.Find("Player");
-        player.transform.position = transform.position;
     }
 }
