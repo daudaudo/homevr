@@ -26,7 +26,7 @@ public class StartScenePhraseRecognizedHandler : MonoBehaviour
                 menu.SetActive(true);
                 return;
                 break;
-            case "hide":
+            case "close":
                 Debug.Log(command);
                 menu.SetActive(false);
                 return;
@@ -64,6 +64,10 @@ public class StartScenePhraseRecognizedHandler : MonoBehaviour
                 Debug.Log(command);
                 player.speed = -2f;
                 player.SetMoveState(true);
+                isWalk = true;
+                isDance = false;
+                animator.SetBool(dance, isDance);
+                animator.SetBool(walk, isWalk);
                 return;
                 break;
             case "dance":
