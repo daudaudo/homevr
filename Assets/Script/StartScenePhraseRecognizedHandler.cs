@@ -41,6 +41,8 @@ public class StartScenePhraseRecognizedHandler : MonoBehaviour, PhraseRecognized
                 player.speed = 2f;
                 player.SetMoveState(true);
                 isWalk = true;
+                isDance = false;
+                animator.SetBool(dance, isDance);
                 animator.SetBool(walk, isWalk);
                 break;
             case "fast":
@@ -58,6 +60,8 @@ public class StartScenePhraseRecognizedHandler : MonoBehaviour, PhraseRecognized
                 break;
             case "dance":
                 isDance = true;
+                isWalk = false;
+                animator.SetBool(walk, isWalk);
                 animator.SetBool(dance, isDance);
                 break;
             case "exit":
