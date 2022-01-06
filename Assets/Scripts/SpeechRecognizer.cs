@@ -5,7 +5,6 @@ using static SpeechRecognizerPlugin;
 
 public class SpeechRecognizer : MonoBehaviour, ISpeechRecognizerPlugin
 {
-    [SerializeField] private Text text;
     StartScenePhraseRecognizedHandler script;
 
     private SpeechRecognizerPlugin plugin = null;
@@ -16,7 +15,7 @@ public class SpeechRecognizer : MonoBehaviour, ISpeechRecognizerPlugin
         plugin = SpeechRecognizerPlugin.GetPlatformPluginVersion(this.gameObject.name);
         plugin.SetLanguageForNextRecognition("en-US");
         plugin.SetContinuousListening(true);
-        plugin.SetMaxResultsForNextRecognition(1);
+        plugin.SetMaxResultsForNextRecognition(5);
         plugin.StartListening();
     }
 
@@ -27,8 +26,9 @@ public class SpeechRecognizer : MonoBehaviour, ISpeechRecognizerPlugin
 
     public void OnResult(string recognizedResult)
     {
-        text.text = recognizedResult;
-        script.handle(recognizedResult);
+        char[] delimiterChars = { '~' };
+        string[] result = recognizedResult.Split(delimiterChars);
+        script.handle(result, result.Length);
     }
 
     public void OnError(string recognizedError)
