@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovePointController : MonoBehaviour
 {
@@ -60,5 +61,15 @@ public class MovePointController : MonoBehaviour
             voice.Play();
             isSpeak = true;
         }
+    }
+
+    public void SpeakExit()
+    {
+        Enter();
+    }
+
+    public void ReturnHome()
+    {
+        SceneManager.LoadScene("MainScene");
     }
 }

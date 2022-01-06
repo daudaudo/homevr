@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Windows.Speech;
 
 public class StartScenePhraseRecognizedHandler : MonoBehaviour, PhraseRecognizedHandler
@@ -58,6 +59,9 @@ public class StartScenePhraseRecognizedHandler : MonoBehaviour, PhraseRecognized
             case "dance":
                 isDance = true;
                 animator.SetBool(dance, isDance);
+                break;
+            case "exit":
+                SceneManager.LoadScene("MainScene");
                 break;
             default :
                 Debug.Log(args.text);
