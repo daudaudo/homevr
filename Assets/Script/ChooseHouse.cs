@@ -10,7 +10,7 @@ public class ChooseHouse : MonoBehaviour
     bool isRotate, isSelect;
     public bool type1;
     public string sceneName;
-    public GameObject light;
+    public GameObject light,menu;
     AudioSource pop;
 
     private void Start()
@@ -35,6 +35,7 @@ public class ChooseHouse : MonoBehaviour
     {
         pop.Play();
         light.SetActive(true);
+        menu.SetActive(true);
         isRotate = true;
         if(type1)
         {
@@ -49,6 +50,7 @@ public class ChooseHouse : MonoBehaviour
     public void Exit()
     {
         light.SetActive(false);
+        menu.SetActive(false);
         isRotate = false;
         transform.eulerAngles = oldRotation;
         transform.localScale = oldScale;
