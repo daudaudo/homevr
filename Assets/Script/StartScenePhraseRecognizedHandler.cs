@@ -81,10 +81,6 @@ public class StartScenePhraseRecognizedHandler : MonoBehaviour
                 SceneManager.LoadScene("MainScene");
                 return;
                 break;
-            default :
-                Debug.Log(command);
-                return;
-                break;
             }
         }
     }
