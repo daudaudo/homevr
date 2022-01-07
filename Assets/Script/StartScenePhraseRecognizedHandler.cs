@@ -40,7 +40,7 @@ public class StartScenePhraseRecognizedHandler : MonoBehaviour
                 animator.SetBool(dance, isDance);
                 return;
                 break;
-            case "move":
+            case "go":
                 Debug.Log(command);
                 player.speed = 2f;
                 player.SetMoveState(true);

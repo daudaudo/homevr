@@ -29171,7 +29171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePoint: {fileID: 2034765321}
-  voice: {fileID: 0}
+  voice: {fileID: 2060560797}
   myDoor: {fileID: 0}
   openTrigger: 0
   closeTrigger: 0
@@ -31031,7 +31031,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 1cf3e387c767e5c45a86cd064bdf340f, type: 3}
+  m_Texture: {fileID: 2800000, guid: 9af8bc99335b060468d242758b5a3e09, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
